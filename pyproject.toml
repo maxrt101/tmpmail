@@ -1,0 +1,24 @@
+[project]
+name = "tmpmail"
+version = "0.1.0"
+description = "A single interface for working with temporary email services"
+readme = "README.md"
+license = "MIT"
+requires-python = ">=3.10"
+#authors = [
+#    { name = "maxrt" }
+#]
+keywords = ["tempmail", "temp-mail", "temp-mail-api"]
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "Operating System :: OS Independent",
+    "Development Status :: 3 - Alpha"
+]
+dependencies = [
+    "requests"
+]
+
+#[project.urls]
+#Homepage = ""
+#Repository = ""
+#Issues = ""
