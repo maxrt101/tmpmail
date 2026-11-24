@@ -18,6 +18,7 @@ class TempMailOrgClient(MailClient):
     __API_BASE__ = 'https://privatix-temp-mail-v1.p.rapidapi.com'
     __CACHE_FILE__ = Path('.cache/tempmailorg_domains.json')
     __DOMAIN_LIST__ = list()
+    __EXCLUDE__ = 'RAPID_API_KEY' not in os.environ
 
     class Letter(Letter):
         def __init__(self, data: dict):

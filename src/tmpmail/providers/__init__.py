@@ -1,5 +1,6 @@
-from tmpmail.providers.mock import InteractiveMockMailClient
+from tmpmail.providers.gmailinator import EMailinatorClient
 from tmpmail.providers.inbox_kitten import InboxkittenClient
+from tmpmail.providers.mock import InteractiveMockMailClient
 from tmpmail.providers.temp_mail_lol import TempMailLolClient
 from tmpmail.providers.temp_mail_org import TempMailOrgClient
 from tmpmail.providers.temp_mail_org_scrap import TempMailOrgScrapperClient

@@ -25,6 +25,7 @@ To test locally, use `tmpmail.InteractiveMockMailClient`, it will prompt you for
 | URL | Class | Needs API Key? | Details |
 | :--- | :--- | :---: | :--- |
 | none(local) | InteractiveMockMailClient | No | Prompts the user in commandline |
+| https://emailnator.com | EMailinatorClient | Yes | Go to https://rapidapi.com/johndevz/api/gmailnator for API key |
 | https://inboxkitten.com | InboxkittenClient | No | Has public mailboxes |
 | https://tempmail.lol | TempMailLolClient | No | |
 | https://temp-mail.org | TempMailOrgClient | Yes | Go to https://rapidapi.com/Privatix/api/temp-mail for API key |

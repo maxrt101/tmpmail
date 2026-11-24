@@ -8,8 +8,9 @@ from tmpmail.mail import MailClient, select_provider
 from tmpmail.exceptions import RequestFailedError
 
 from tmpmail.providers import (
-    InteractiveMockMailClient,
+    EMailinatorClient,
     InboxkittenClient,
+    InteractiveMockMailClient,
     TempMailLolClient,
     TempMailOrgClient,
     TempMailOrgScrapperClient,
@@ -19,4 +20,4 @@ from tmpmail.providers import (
 import tmpmail.test
 
 DefaultClient = select_provider(os.environ['TMPMAIL_PROVIDER']) if 'TMPMAIL_PROVIDER' in os.environ else InboxkittenClient
-RandomClient = random.choice(MailClient.__subclasses__())
+RandomClient = random.choice([x for x in MailClient.__subclasses__() if not getattr(x, '__EXCLUDE__', False)])
