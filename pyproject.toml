@@ -26,3 +26,6 @@ dependencies = [
 Homepage = "https://github.com/maxrt101/tmpmail"
 Repository = "https://github.com/maxrt101/tmpmail"
 Issues = "https://github.com/maxrt101/tmpmail/issues"
+
+[tool.hatch.build.targets.wheel]
+packages = ["src/tmpmail"]
