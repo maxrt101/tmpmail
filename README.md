@@ -23,7 +23,7 @@ To test locally, use `tmpmail.InteractiveMockMailClient`, it will prompt you for
 ### Supported providers
 
 | URL | Class | Needs API Key? | Details |
-| :--- | :---: | :---: | ---: |
+| :--- | :--- | :---: | :--- |
 | none(local) | InteractiveMockMailClient | No | Prompts the user in commandline |
 | inboxkitten.com | InboxkittenClient | No | Has public mailboxes |
 | tempmail.lol | TempMailLolClient | No | |
@@ -35,12 +35,13 @@ To test locally, use `tmpmail.InteractiveMockMailClient`, it will prompt you for
 
 There are 2 half-abstract base classes: `MailClient` & `Letter`.  
 Each of the providers subclass the `MailClient` and implement their own `Letter` if needed.  
-Each `MailClient` receives 2 arguments in `__init__`: `address` & `proxies`.  
-`address` can be specified to use a pre-determined address for the client, otherwise a random one will be generated based on available provider's domains.  
-Some clients (like `tempmail.lol`) don't support specifying an address and can only use a random generated one.  
-`proxies` are a standardized dictionary fed to `requests` module, which may include `http`, `https` & `socks5` entries.  
+Each `MailClient` receives 2 arguments in `__init__`: `address` & `proxies`:  
+ - `address` can be specified to use a pre-determined address for the client, otherwise a random one will be generated based on available provider's domains. Some clients (like `tempmail.lol`) don't support specifying an address and can only use a random generated one.  
+ - `proxies` are a standardized dictionary fed to `requests` module, which may include `http`, `https` & `socks5` entries.  
 
 Each client has an `inbox()` method, which returns a list of `Letter` subclasses, in order they arrived to the client.  
+
+There are no webhooks, or background polling for now: each `inbox()` call polls the server once.  
 
 Each `Letter` has 3 required properties: `sender`, `subject` and `body`.  
 Based on provider's architecture, this properties may make another API request to retrieve the data, if inbox doesn't provide it (many providers return only sender & subject, with body being retrieved through a separate request).  
