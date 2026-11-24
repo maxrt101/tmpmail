@@ -1,5 +1,5 @@
 [project]
-name = "tmpmail"
+name = "pytmpmail"
 version = "0.1.0"
 description = "A single interface for working with temporary email services"
 readme = "README.md"
