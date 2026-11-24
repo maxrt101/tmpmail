@@ -5,9 +5,9 @@ description = "A single interface for working with temporary email services"
 readme = "README.md"
 license = "MIT"
 requires-python = ">=3.10"
-#authors = [
-#    { name = "maxrt" }
-#]
+authors = [
+    { name = "maxrt" }
+]
 keywords = ["tempmail", "temp-mail", "temp-mail-api"]
 classifiers = [
     "Programming Language :: Python :: 3",
@@ -18,7 +18,7 @@ dependencies = [
     "requests"
 ]
 
-#[project.urls]
-#Homepage = ""
-#Repository = ""
-#Issues = ""
+[project.urls]
+Homepage = "https://github.com/maxrt101/tmpmail"
+Repository = "https://github.com/maxrt101/tmpmail"
+Issues = "https://github.com/maxrt101/tmpmail/issues"
