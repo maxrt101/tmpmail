@@ -25,11 +25,11 @@ To test locally, use `tmpmail.InteractiveMockMailClient`, it will prompt you for
 | URL | Class | Needs API Key? | Details |
 | :--- | :--- | :---: | :--- |
 | none(local) | InteractiveMockMailClient | No | Prompts the user in commandline |
-| inboxkitten.com | InboxkittenClient | No | Has public mailboxes |
-| tempmail.lol | TempMailLolClient | No | |
-| temp-mail.org | TempMailOrgClient | Yes | Go to https://rapidapi.com/Privatix/api/temp-mail for API key |
-| temp-mail.org | TempMailOrgScrapperClient | No | DOESN'T WORK & requires additional package - cloudscrapper |
-| tempmail.plus | TempMailPlusClient | No | |
+| https://inboxkitten.com | InboxkittenClient | No | Has public mailboxes |
+| https://tempmail.lol | TempMailLolClient | No | |
+| https://temp-mail.org | TempMailOrgClient | Yes | Go to https://rapidapi.com/Privatix/api/temp-mail for API key |
+| https://temp-mail.org | TempMailOrgScrapperClient | No | DOESN'T WORK & requires additional package - cloudscrapper |
+| https://tempmail.plus | TempMailPlusClient | No | |
 
 ### Architecture
 
