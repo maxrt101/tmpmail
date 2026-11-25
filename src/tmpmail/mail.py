@@ -23,10 +23,3 @@ class MailClient(ABC):
 
     def generate_username(self) -> str:
         return ''.join(random.choices(string.ascii_letters + string.digits, k=12))
-
-
-def select_provider(name: str):
-    for sub_cls in MailClient.__subclasses__():
-        if sub_cls.__NAME__ == name and not getattr(sub_cls, '__EXCLUDE__', False):
-            return sub_cls
-    raise ValueError(f'Invalid provider: {name}. Available providers: {[x.__NAME__ for x in MailClient.__subclasses__()]}')
