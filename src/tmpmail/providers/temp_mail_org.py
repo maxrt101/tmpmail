@@ -16,9 +16,9 @@ from tmpmail.exceptions import RequestFailedError
 class TempMailOrgClient(MailClient):
     __NAME__ = 'temp-mail.org'
     __API_BASE__ = 'https://privatix-temp-mail-v1.p.rapidapi.com'
+    __EXCLUDE_IF__ = lambda: 'RAPID_API_KEY' not in os.environ
     __CACHE_FILE__ = Path('.cache/tempmailorg_domains.json')
     __DOMAIN_LIST__ = list()
-    __EXCLUDE__ = 'RAPID_API_KEY' not in os.environ
 
     class Letter(Letter):
         def __init__(self, data: dict):
