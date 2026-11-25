@@ -12,8 +12,17 @@ from tmpmail.exceptions import RequestFailedError
 class EMailinatorClient(MailClient):
     __NAME__ = 'emailnator.com'
     __API_BASE__ = 'https://gmailnator.p.rapidapi.com/api/'
-    __TYPES__ = ['public_email_domain', 'public_gmail_plus', 'public_gmail_dot', 'public_googlemail', 'private_email_domain', 'private_gmail_plus', 'private_gmail_dot', 'private_googlemail']
-    __EXCLUDE__ = 'RAPID_API_KEY' not in os.environ
+    __EXCLUDE_IF__ = lambda: 'RAPID_API_KEY' not in os.environ
+    __TYPES__ = [
+        'public_email_domain',
+        'public_gmail_plus',
+        'public_gmail_dot',
+        'public_googlemail',
+        'private_email_domain',
+        'private_gmail_plus',
+        'private_gmail_dot',
+        'private_googlemail'
+    ]
 
     @staticmethod
     def _headers():
