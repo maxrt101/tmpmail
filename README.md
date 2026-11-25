@@ -56,7 +56,7 @@ For testing, there is a `tmpmail.test.send_email` function, which uses https://m
 
 ### Environment Variables
 
-Currently only `TempMailOrgClient` requires an API key, and it expects it to be in `RAPID_API_KEY` env variable.  
+Currently only `TempMailOrgClient` & `EMailinatorClient` require an API key, and they expect it to be in `RAPID_API_KEY` env variable, since they use the same API service.  
 
 For `tmpmail.test.send_email` (which uses https://maileroo.com) to work, maileroo api key and address is needed, it's expected to be in `MAILEROO_API_KEY` & `MAILEROO_ADDRESS` variables.  
 
